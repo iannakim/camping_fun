@@ -3,7 +3,7 @@
 <ul>
     <% @camper.signups.each do |signup_instance|%>
         <li>
-            <%= signup_instance.activity.name %> - <%= signup_instance.time %>
+            <%= signup_instance.activity.name %> - at <%= signup_instance.time %>
         </li>
     <%end%>
 </ul>

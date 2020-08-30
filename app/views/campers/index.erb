@@ -1,7 +1,7 @@
 <h2>Here are All the Campers</h2>
 
 <%# Display a list all of the campers %>
-<strong>Camper Name</strong> | Age<br> 
+<strong>Camper Name</strong> | <strong>Age</strong><br> 
 <% @campers.map do |camper| %><br>
 <%=link_to camper.name, camper_path(camper) %> <%= camper.age%>
 <%end%>
