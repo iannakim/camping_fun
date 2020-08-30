@@ -1,6 +1,9 @@
 
+<div></div>
 <strong>Camper: </strong><%= @signup.camper.name %><br>
 <strong>Activity: </strong><%= @signup.activity.name%><br>
 <strong>Time: </strong><%= @signup.time%><br><br>
-<%= button_to "Back to Index", signups_path, method: :get %>
-<%= button_to "Delete this signup", signup_path(@signup), method: :delete %>
+</div>
+<p><%= button_to "Edit Signup", edit_signup_path, method: :get %></p>
+<p><%= button_to "Back to Index", signups_path, method: :get %></p>
+<p><%= button_to "Delete this signup", signup_path(@signup), method: :delete %></p>
