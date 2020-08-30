@@ -1,8 +1,8 @@
-<h2>All Sign Ups</h2>
+<h2>All Sign Ups Index</h2>
 
 <%# Display a list all of the campers %>
-Camper Name | Activity | Time<br> 
+<strong>Camper Name | Activity | Time<br> </strong>
 <% @signups.map do |signup| %><br>
 <%=link_to signup.full_info, signup_path(signup) %>
 <%end%>
-<p><%= button_to "New Sign Up", new_signup_path, method: :get %></p>
+<p><%= button_to "Create New Sign Up", new_signup_path, method: :get %></p>
