@@ -1,0 +1,11 @@
+
+<h2><%= @camper.name %></h2> <p><strong>Age:</strong> <%= @camper.age%></p>
+<ul>
+    <% @camper.signups.each do |signup_instance|%>
+        <li>
+            <%= signup_instance.activity.name %> - <%= signup_instance.time %>
+        </li>
+    <%end%>
+</ul>
+
+<%= button_to "Back to Index", campers_path, method: :get %><br>

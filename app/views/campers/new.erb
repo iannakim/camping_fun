@@ -1,0 +1,14 @@
+<h2>Create Camper</h2>
+<div>
+Please Fill out the form and submit:<br>
+
+
+
+<%=form_for @camper do |f|%><br>
+<%=f.label "Camper Name" %><br>
+<%=f.text_field :name %><br>
+<%=f.label "Age"%><br>
+<%=f.text_field :age %><br>
+<%=f.submit "Submit!" %>
+<%end%>
+</div>

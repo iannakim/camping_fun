@@ -1,0 +1,6 @@
+
+<strong>Camper: </strong><%= @signup.camper.name %><br>
+<strong>Activity: </strong><%= @signup.activity.name%><br>
+<strong>Time: </strong><%= @signup.time%><br><br>
+<%= button_to "Back to Index", signups_path, method: :get %>
+<%= button_to "Delete this signup", signup_path(@signup), method: :delete %>

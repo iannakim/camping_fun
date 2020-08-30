@@ -1,3 +1,10 @@
 <h2>Here are All the Activities</h2>
 
 <%# Display a list all of the activities %>
+<strong>Activity Name</strong> | Difficulty Level<br> 
+<% @activities.map do |activity| %><br>
+<strong><%= activity.name%></strong> <%= activity.difficulty%>
+<%end%>
+<p><%= button_to "Sign up", new_signup_path, method: :get %></p>
+
+

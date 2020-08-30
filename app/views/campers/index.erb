@@ -1,4 +1,9 @@
 <h2>Here are All the Campers</h2>
 
 <%# Display a list all of the campers %>
-
+<strong>Camper Name</strong> | Age<br> 
+<% @campers.map do |camper| %><br>
+<%=link_to camper.name, camper_path(camper) %> <%= camper.age%>
+<%end%>
+<p><%= button_to "See All Activities", activities_path, method: :get %></p>
+<p><%= button_to "Sign up", new_signup_path, method: :get %></p>
