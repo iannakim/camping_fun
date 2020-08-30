@@ -1,10 +1,12 @@
-<h2>Here are All the Activities</h2>
+<h2>List of Camping Activities:</h2>
 
 <%# Display a list all of the activities %>
-<strong>Activity Name</strong> | Difficulty Level<br> 
-<% @activities.map do |activity| %><br>
-<strong><%= activity.name%></strong> <%= activity.difficulty%>
+<strong>Activity Name</strong> | <strong>Difficulty Level</strong><br> 
+<ul>
+    <% @activities.map do |activity| %><br>
+    <li><%= activity.name%> - level: <%= activity.difficulty%></li>
 <%end%>
+</ul>
 <p><%= button_to "Sign up", new_signup_path, method: :get %></p>
 
 
