@@ -16,7 +16,7 @@ class SignupsController < ApplicationController
     def create
         @signup = Signup.create(signup_params)
         @signup.save
-        redirect_to new_signup_path
+        redirect_to signups_path
     end
 
     def show

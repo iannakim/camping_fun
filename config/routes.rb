@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  get '/campers', to: "campers#index", as: "campers"
-  get '/campers/new', to: "campers#new", as: "new_camper"
+  get '/campers', to: "campers#index", as: "campers" #get is like display 
+  get '/campers/new', to: "campers#new", as: "new_camper" #<-- redirect_to new_camper_path
   post '/campers/', to: "campers#create"
-  get '/campers/:id', to: "campers#show", as: "camper"
+  get '/campers/:id', to: "campers#show", as: "camper" #<-- #camper_path
+  delete '/campers/:id', to: "campers#destroy"
+  get '/campers/:id/edit', to: "campers#edit", as: "edit_camper"
+  patch '/campers/:id', to: "camperss#update"
+
 
   get '/activities', to: "activities#index", as: "activities"
 

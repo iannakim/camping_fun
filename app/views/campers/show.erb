@@ -9,3 +9,5 @@
 </ul>
 
 <%= button_to "Back to Index", campers_path, method: :get %><br>
+<p><%= button_to "Edit Camper", edit_camper_path, method: :get %></p>
+<p><%= button_to "Delete Camper", camper_path(@camper), method: :delete %></p>
